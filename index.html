@@ -1,0 +1,398 @@
+<!doctype html>
+<!--
+	Author by FreeHTML5.co
+	Twitter: https://twitter.com/fh5co
+	Facebook: https://fb.com/fh5co
+	URL: https://freehtml5.co
+-->
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/slick.css">
+	<style>
+		/* Garantiza que la barra espaciadora / scrollbar siempre exista y no desaparezca */
+		html {
+			scroll-behavior: smooth;
+			overflow-y: scroll !important;
+		}
+
+		/* Barra de navegación siempre visible arriba */
+		.site-navigation {
+			position: fixed !important;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 99999;
+			background-color: #242424;
+		}
+
+		/* Espacio para que el banner superior no quede oculto detrás de la barra */
+		.fh5co-top-banner {
+			padding-top: 100px;
+		}
+
+		/* Compensación para que los títulos de sección no queden tapados por la barra al navegar */
+		section[id] {
+			scroll-margin-top: 90px;
+		}
+	</style>
+	<title>Dante Martínez | Portafolio</title>
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav class="site-navigation">
+		<div class="site-navigation-inner site-container">
+			<img src="./images/site-logo.png" alt="site logo">
+			<div class="main-navigation">
+				<ul class="main-navigation__ul">
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#sobre-mi">Sobre mí</a></li>
+					<li><a href="#proyectos">Proyectos</a></li>
+					<li><a href="#habilidades">Habilidades</a></li>
+					<li><a href="#certificaciones">Certificaciones</a></li>
+				</ul>
+			</div>
+			<div id="myBtn" class="burger-container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<script>
+				function myFunction(x) {
+					x.classList.toggle("change");
+				}
+
+				// Al hacer clic en una sección, simula el clic en el botón para cerrarlo con la lógica original de la plantilla
+				document.addEventListener("DOMContentLoaded", function () {
+					var navLinks = document.querySelectorAll(".main-navigation__ul li a");
+					var burgerBtn = document.getElementById("myBtn");
+
+					navLinks.forEach(function (link) {
+						link.addEventListener("click", function () {
+							if (burgerBtn && burgerBtn.classList.contains("change")) {
+								burgerBtn.click(); // Cierra el menú y restablece las tres barras limpiamente
+							}
+						});
+					});
+				});
+			</script>
+
+		</div>
+	</nav>
+	<!-- Navigation end -->
+	<!-- Top banner -->
+	<section class="fh5co-top-banner" id="inicio">
+		<div class="top-banner__inner site-container">
+			<div class="top-banner__image">
+				<img src="./images/image1.png" alt="author image" >
+			</div>
+			<div class="top-banner__text">
+				<div class="top-banner__text-up">
+					<span class="brand-span">Hola! Soy</span>
+					<h2 class="top-banner__h2">Dante</h2>
+				</div>
+				<div class="top-banner__text-down">
+					<h2 class="top-banner__h2">Martínez</h2>
+					<span class="brand-span">Ingeniero en Sistemas Computacionales</span>
+				</div>
+				<p>Estudiante con interés en desarrollo web, administración de bases de datos, redes e inteligencia artificial.</p>
+				<a href="mailto:martinezvillalobosdante@gmail.com" class="brand-button">Contacto > </a>
+			</div>
+		</div>
+	</section>
+	<!-- Top banner end -->
+
+	<!-- About me -->
+	<section class="fh5co-about-me" id="sobre-mi">
+		<div class="about-me-inner site-container">
+			<article class="portfolio-wrapper">
+				<div class="portfolio__img">
+					<img src="./images/image2.png" class="about-me__profile" alt="about me profile picture">
+				</div>
+				<div class="portfolio__bottom">
+					<div class="portfolio__name">
+						<span></span>
+						<h2 class="universal-h2">Dante Martínez</h2>
+					</div>
+					<p>46 A Calle Rinconadas · San Pablo Etla, Oaxaca · Tel: (951) 156-7129</p>
+				</div>
+			</article>
+			<div class="about-me__text">
+				<div class="about-me-slider">
+					<div class="about-me-single-slide">
+						<h2 class="universal-h2 universal-h2-bckg">Acerca de mí</h2>
+						<p><span>E</span>studiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Oaxaca con especialidad en Desarrollo Ágil de Software (ISIE-DAS-2026). Proactivo, enfocado en la resolución de problemas técnicos y con experiencia en proyectos de software colaborativo, patrones de diseño y arquitecturas cliente-servidor.</p>
+						<h4>Formación</h4>
+						<p class="p-white">ITO Oaxaca</p>
+					</div>
+					<div class="about-me-single-slide">
+						<h2 class="universal-h2 universal-h2-bckg">Intereses</h2>
+						<p><span>M</span>ás allá del código y la ingeniería de software, dedico mi tiempo libre a videojuegos de estrategia y toma de decisiones, lectura, acertijos de lógica y desafíos deductivos que ponen a prueba el razonamiento analítico, así como a seguir descubriendo nuevas tecnologías en el mundo digital.</p>
+						<h4>Enfoque</h4>
+						<p class="p-white">Lógica y Estrategia</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-me-bckg"></div>
+	</section>
+	<!-- About me end -->
+
+	<!-- Books and CD -->
+	<section class="fh5co-books" id="proyectos">
+		<div class="site-container">
+			<h2 class="universal-h2 universal-h2-bckg">Proyectos y Experiencia</h2>
+			<div class="books">
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/resized_serviciosweb_apps.png" alt="single book and cd">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="book image">
+						</div>
+					</a>
+					<h4 class="single-book__title">Servicios Web y Apps</h4>
+					<span class="single-book__price">En curso</span>
+				</div>
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/gestion_bd.png" alt="single book and cd">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="book image">
+						</div>
+					</a>
+					<h4 class="single-book__title">Gestión de Bases de Datos</h4>
+					<span class="single-book__price">Finalizado</span>
+				</div>
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/agil.png" alt="single book and cd">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="book image">
+						</div>
+					</a>
+					<h4 class="single-book__title">Desarrollo Ágil</h4>
+					<span class="single-book__price">Especialidad</span>
+				</div>
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/redes_cloud.png" alt="single book and cd">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="book image">
+						</div>
+					</a>
+					<h4 class="single-book__title">Redes y Cloud</h4>
+					<span class="single-book__price">Fundamentos</span>
+				</div>
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/fitzcell_logo.png" alt="single book and cd">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="book image">
+						</div>
+					</a>
+					<h4 class="single-book__title">FitzCell Reparaciones</h4>
+					<span class="single-book__price">Proyecto de Empresa</span>
+				</div>
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/bibliotecaescolar.png" alt="single book and cd">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="book image">
+						</div>
+					</a>
+					<h4 class="single-book__title">Biblioteca Escolar</h4>
+					<span class="single-book__price">Proyecto</span>
+				</div>
+			</div>
+			<div class="books-brand-button">
+				<a href="https://github.com/Pollito890d" class="brand-button">Ver GitHub</a>
+			</div>
+		</div>
+	</section>
+	<!-- Books and CD end -->
+
+	<!-- Counter -->
+	<div class="fh5co-counter counters">
+		<div class="counter-inner site-container">
+			<div class="single-count">
+				<span class="count" data-count="4">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-1.png" alt="counter icon">
+					<p>Certificaciones</p>
+				</div>
+			</div>
+			<div class="single-count">
+				<span class="count" data-count="12">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-2.png" alt="counter icon">
+					<p>Tecnologías</p>
+				</div>
+			</div>
+			<div class="single-count">
+				<span class="count" data-count="4">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-3.png" alt="counter icon">
+					<p>Especialidades</p>
+				</div>
+			</div>
+			<div class="single-count">
+				<span class="count" data-count="100">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-4.png" alt="counter icon">
+					<p>Compromiso</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Counter -->
+
+	<!-- Blog -->
+	<section class="fh5co-blog" id="habilidades">
+		<div class="site-container">
+			<h2 class="universal-h2 universal-h2-bckg">Habilidades Técnicas</h2>
+			<div class="blog-slider blog-inner">
+				<div class="single-blog">
+					<div class="single-blog__img">
+						<img src="./images/front_backend.png" alt="blog image">
+					</div>
+					<div class="single-blog__text">
+						<h4>Frontend &amp; Backend</h4>
+						<span>Lenguajes y Herramientas</span>
+						<p>Desarrollo con HTML5, CSS3, JavaScript, Angular, React, Node.js y Sass. Diseño de interfaces web adaptables y consumo de APIs RESTful.</p>
+					</div>
+				</div>
+				<div class="single-blog">
+					<div class="single-blog__img">
+						<img src="./images/abd.png" alt="blog image">
+					</div>
+					<div class="single-blog__text">
+						<h4>Bases de Datos</h4>
+						<span>Modelado y Gestión</span>
+						<p>Modelado relacional y dimensional, normalización de esquemas, optimización de consultas, transacciones y control de integridad de datos.</p>
+					</div>
+				</div>
+				<div class="single-blog">
+					<div class="single-blog__img">
+						<img src="./images/redes.png" alt="blog image">
+					</div>
+					<div class="single-blog__text">
+						<h4>Metodologías y Redes</h4>
+						<span>Competencias Clave</span>
+						<p>Desarrollo ágil bajo marcos Scrum y Kanban, patrones de diseño de software y fundamentos de conmutación, enrutamiento y administración de redes.</p>
+					</div>
+				</div>
+				<div class="single-blog">
+					<div class="single-blog__img">
+						<img src="./images/movil.png" alt="blog image">
+					</div>
+					<div class="single-blog__text" style="padding-top: 20px;">
+						<h4>Desarrollo Móvil y Multiplataforma</h4>
+						<span>Entornos Móviles</span>
+						<p>Diseño e implementación de aplicaciones para dispositivos móviles, consumo de APIs y servicios web adaptados a pantallas táctiles, y gestión eficiente del ciclo de vida móvil.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog end -->
+
+	<!-- Quotes -->
+	<section class="fh5co-quotes" id="certificaciones">
+		<div class="site-container">
+			<div class="about-me-slider">
+				<div>
+					<h2 class="universal-h2 universal-h2-bckg">Cursos y Certificaciones</h2>
+					<p>“Google AI Essentials y Google Cloud Computing Foundations: Cloud Computing Fundamentals.”</p>
+					<img src="./images/quotes.svg" alt="quotes svg">
+					<h4>Google</h4>
+					<p>Certificación Oficial</p>
+				</div>
+				<div>
+					<h2 class="universal-h2 universal-h2-bckg">Cursos y Certificaciones</h2>
+					<p>“Tecnología y Aplicaciones de la Inteligencia Artificial e Introduction to Generative AI.”</p>
+					<img src="./images/quotes.svg" alt="quotes svg">
+					<h4>Inteligencia Artificial</h4>
+					<p>Formación Especializada</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Quotes end -->
+
+	<!-- Social -->
+	<section class="fh5co-social">
+		<div class="site-container">
+			<div class="social">
+				<h5>Mis redes sociales</h5>
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/dante-martinez-villalobos-46b069168" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+					<a href="https://github.com/Pollito890d" target="_blank"><img src="./images/Github-Logo.png" style="width: 17px; height: 17px;" alt="social icon"></a>
+					<a href="https://www.facebook.com/profile.php?id=100019535343668" target="_blank"><img src="./images/facebook.png" style="width: 20px; height: 20px;" alt="social icon"></a>
+					<a href="mailto:martinezvillalobosdante@gmail.com" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+				</div>
+				<h5>Dante Martínez</h5>
+			</div>
+		</div>
+	</section>
+	<!-- Social -->
+
+	<!-- Footer -->
+	<footer class="site-footer">
+		<div class="site-container">
+			<div class="footer-inner">
+				<div class="footer-info">
+					<div class="footer-info__left">
+						<img src="./images/image1.png" alt="about me image" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+						<p>Dante Martínez</p>
+					</div>
+					<div class="footer-info__right">
+						<h5>Contacto</h5>
+						<p class="footer-phone">Tel: (951) 156-7129</p>
+						<p>Email : martinezvillalobosdante@gmail.com</p>
+						<div class="social-icons">
+							<a href="https://www.linkedin.com/in/dante-martinez-villalobos-46b069168" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+							<a href="https://github.com/Pollito890d" target="_blank"><img src="./images/Github-Logo.png" style="width: 17px; height: 17px;" alt="social icon"></a>
+							<a href="https://www.facebook.com/profile.php?id=100019535343668" target="_blank"><img src="./images/facebook.png" style="width: 20px; height: 20px;" alt="social icon"></a>
+							<a href="mailto:martinezvillalobosdante@gmail.com" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-contact-form">
+					<h5>Formulario de Contacto</h5>
+					<form class="contact-form">
+						<div class="contact-form__input">
+							<input type="text" name="name" placeholder="Nombre">
+							<input type="email" name="email" placeholder="Correo electrónico">
+						</div>
+						<textarea placeholder="Mensaje"></textarea>
+						<input type="submit" name="submit" value="Enviar" class="submit-button">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="site-container footer-bottom-inner">
+				<p>© 2026 Dante Martínez | Design by <a href="https://freehtml5.co/" target="_blank">freehtml5.co</a> | All rights Reserved.</p>
+				<div class="footer-bottom__img">
+					<img src="./images/footer-mastercard.png" alt="footer image">
+					<img src="./images/footer-paypal.png" alt="footer image">
+					<img src="./images/footer-visa.png" alt="footer image">
+					<img src="./images/footer-fedex.png" alt="footer image">
+					<img src="./images/footer-dhl.png" alt="footer image">
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer end -->
+
+	<!-- Scripts -->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/slick.min.js"></script>
+	<script src="./js/main.js"></script>
+
+</body>
+</html>
